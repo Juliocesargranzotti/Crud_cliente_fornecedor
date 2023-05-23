@@ -1,0 +1,26 @@
+{
+  "Cliente": [
+    {
+      "id": 1,
+      "name": "Nicolas",
+      "date": "03/11/200",
+      "email": "Nicolas@gmail",
+      "telefone": 11929330243
+    },
+    {
+      "id": 2,
+      "name": "Julio",
+      "date": "02/12/2004",
+      "email": "julio@gmail.com",
+      "telefone": 1192931234
+    },
+    {
+      "id": 3,
+      "name": "Willian",
+      "date": "12/12/2000",
+      "email": "will@gmail.com",
+      "telefone": 1232434563
+    
+    }
+  ]
+}
