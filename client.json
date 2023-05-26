@@ -24,5 +24,17 @@
       "telefone": "11 92354 1241",
       "genero": "Femenina"
     }
+  ],
+
+
+
+  "fornecedor": [
+    {
+      "id": 1,
+      "name": "Nicolas",
+      "email": "Nicolas@gmail",
+      "categoria" : "camisa"
+    }
   ]
-}
+
+  }
