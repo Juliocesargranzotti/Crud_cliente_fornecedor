@@ -5,4 +5,5 @@ export interface Clientes{
   date : number;
   email : string;
   telefone : number;
+  genero : string;
 }

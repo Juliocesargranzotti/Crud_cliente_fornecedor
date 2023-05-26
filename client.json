@@ -5,21 +5,24 @@
       "name": "Nicolas",
       "date": "03/11/200",
       "email": "Nicolas@gmail",
-      "telefone": 11929330243
+      "telefone": 11929330243,
+      "genero": "Masculino"
     },
     {
       "id": 2,
       "name": "Julio",
       "date": "02/12/2004",
-      "email": "julio@gmail.com",
-      "telefone": 1192931234
+      "email": "Julio@gmail.com",
+      "telefone": 1192931234,
+      "genero": "Masculino"
     },
     {
       "id": 3,
-      "name": "Willian",
-      "date": "12/12/2000",
-      "email": "will@gmail.com",
-      "telefone": 1232434563
+      "name": "Giovana",
+      "date": "2000-02-02",
+      "email": "Giovana@gmail.com",
+      "telefone": "11 92354 1241",
+      "genero": "Femenina"
     }
   ]
 }

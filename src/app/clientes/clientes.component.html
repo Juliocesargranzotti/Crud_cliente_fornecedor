@@ -1,37 +1,15 @@
-<nav class="navbar navbar-expand-lg bg-light">
-  <div class="container-fluid">
-    <a class="navbar-brand" routerLink="">Cadastro de Clientes</a>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" routerLink="clientes">Clientes</a>
-
-        </li>
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" routerLink="fornecedor">Fornecedor</a>
-
-        </li>
-        
-
-      </ul>
-    </div>
-  </div>
-</nav>
-
-
-
 
 <div class="row">
   <div class="col-8 m-auto">
 
 
     <form [formGroup]="formGroupClient">
- <div class="mb-2">
+ <div class="mb-3">
   <div class="display-6 text-center">
       Cadastro De Clientes
   </div>
     </div>
-    <div class="mb-2">
+    <div class="mb-3">
       <label for="name" class="form-label">Nome:</label>
       <input type="text" formControlName="name" class="form-control" id="name" placeholder="nome">
 
@@ -40,11 +18,11 @@
   </div>
 
     </div>
-    <div class="mb-2">
+    <div class="mb-3">
       <label for="date" class="form-label">Data de Nascimento:</label>
       <input type="date" formControlName="date" class="form-control" id="date" placeholder="date">
     </div>
-    <div class="mb-2">
+    <div class="mb-3">
       <label for="email" class="form-label">Email:</label>
       <input type="email" formControlName="email" class="form-control" id="email" placeholder="email">
 
@@ -54,7 +32,7 @@
 
     </div>
 
-    <div class="mb-2">
+    <div class="mb-3">
       <label for="telefone" class="form-label">Telefone</label>
       <input type="telefone" formControlName="telefone" class="form-control" id="telefone" placeholder="telefone">
 
@@ -62,10 +40,30 @@
         <small class="text-danger">Numero inválido!</small>
   </div>
 
+  <div class="mb-3">
+
+    <label for="genero" class="form-label">Genero</label>
+
+    <div class="form-check">
+      <input class="form-check-input" type="radio" formControlName="genero" name="exampleRadios" id="Masculino" value="Masculino" checked>
+      <label class="form-check-label" for="Masculino">
+        Masculino
+      </label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" formControlName="genero" name="exampleRadios" id="Femenina" value="Femenina">
+      <label class="form-check-label" for="Femenina">
+        Femenina
+      </label>
+    </div>
 
     </div>
 
-    <div class="mb-3 d-flex justify-content-end">
+
+    </div>
+
+
+    <div class="mb-2 d-flex justify-content-end">
       <button type="button" class="btn btn-dark me-1" (click)="save()">Salvar</button>
       <button type="button" class="btn btn-dark" (click)="clean()">Limpar</button>
     </div>
@@ -75,7 +73,6 @@
 </div>
 </div>
 
-
 <table class="table table-striped">
   <thead>
     <tr>
@@ -84,6 +81,7 @@
       <th scope="col">Idade</th>
       <th scope="col">Email</th>
       <th scope="col">Telefone</th>
+      <th scope="col">Genero</th>
     </tr>
   </thead>
   <tbody>
@@ -93,6 +91,7 @@
       <td>{{clientes.date}}</td>
       <td>{{clientes.email}}</td>
       <td>{{clientes.telefone}}</td>
+      <td>{{clientes.genero}}</td>
       <td>
         <button type="button" class="btn btn-dark me-1" (click)="edit(clientes)" >Editar</button>
         <button type="button" class="btn btn-dark" (click)="delete(clientes)">Excluir</button>

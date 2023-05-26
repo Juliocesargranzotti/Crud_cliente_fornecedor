@@ -24,7 +24,8 @@ export class ClientesComponent {
       name : ['',[Validators.required]],
       date : [''],
       email : ['',[Validators.required,Validators.email]],
-      telefone : ['',[Validators.required]]
+      telefone : ['',[Validators.required]],
+      genero : ['',[Validators.required]]
     });
   }
 
@@ -80,8 +81,8 @@ export class ClientesComponent {
     this.submitted = false;
   }
 
-  edit( clientes : Clientes){
-    this.formGroupClient.setValue(this.clientes);
+  edit(clientes : Clientes){
+    this.formGroupClient.setValue(clientes);
     this.isEditing = true;
   }
 
@@ -101,6 +102,10 @@ export class ClientesComponent {
 
   get telefone() : any{
     return this.formGroupClient.get("telefone");
+  }
+
+  get genero() : any{
+    return this.formGroupClient.get("genero");
   }
 
 }
