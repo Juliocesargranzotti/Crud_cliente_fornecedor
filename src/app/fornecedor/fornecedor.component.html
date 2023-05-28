@@ -26,13 +26,30 @@
   </div>
 
   <div class="mb-3">
-    <label for="categoria" class="form-label">Categoria:</label>
-    <input type="categoria" formControlName="categoria" class="form-control" id="categoria" placeholder="categoria">
+  <label class="form-label">Categoria</label>
+
+  <div class="form-check">
+    <input type="checkbox" formArrayName="categoria" class="form-check-input" id="categoria-roupas" [value]="'Roupas'" (change)="toggleCategoria('Roupas')"/>
+    <label for="categoria-roupas" class="form-check-label">Roupas</label>
   </div>
+  <div class="form-check">
+    <input type="checkbox" formArrayName="categoria" class="form-check-input" id="categoria-eletronicos" [value]="'Eletrônicos'" (change)="toggleCategoria('Eletrônicos')"/>
+    <label for="categoria-eletronicos" class="form-check-label">Eletrônicos</label>
+  </div>
+  <div class="form-check">
+    <input type="checkbox" formArrayName="categoria" class="form-check-input" id="categoria-sportivos" [value]="'Sportivos'" (change)="toggleCategoria('Sportivos')"/>
+    <label for="categoria-sportivos" class="form-check-label">Sportivos</label>
+  </div>
+  <div class="form-check">
+    <input type="checkbox" formArrayName="categoria" class="form-check-input" id="categoria-servicos" [value]="'Serviços'" (change)="toggleCategoria('Serviços')"/>
+    <label for="categoria-servicos" class="form-check-label">Serviços</label>
+  </div>
+
+
     <div *ngIf="submitted && categoria.invalid">
       <small class="text-danger">categoria inválido!</small>
 </div>
-
+  </div>
 
     <div class="mb-2 d-flex justify-content-end">
       <button type="button" class="btn btn-dark me-1" (click)="save()">Salvar</button>
@@ -40,6 +57,8 @@
     </div>
 
 </form>
+
+
 
 
 <table class="table table-striped">
@@ -57,7 +76,9 @@
       <th scope="row">{{fornecedor.id}}</th>
       <td>{{fornecedor.name}}</td>
       <td>{{fornecedor.email}}</td>
-      <td>{{fornecedor.categoria}}</td>
+      <td>
+        <span *ngFor="let cat of fornecedor.categoria" class="mr-1">{{ cat }}</span>
+      </td>
 
       <td>
         <button type="button" class="btn btn-dark me-1" (click)="edit(fornecedor)" >Editar</button>

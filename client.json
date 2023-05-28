@@ -25,16 +25,23 @@
       "genero": "Femenina"
     }
   ],
-
-
-
   "fornecedor": [
     {
       "id": 1,
       "name": "Nicolas",
       "email": "Nicolas@gmail",
-      "categoria" : "camisa"
+      "categoria": [
+        "Alimentos"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Marcos",
+      "email": "Marcoshh@gmail.com",
+      "categoria": [
+        "Roupas",
+        "Alimentos"
+      ]
     }
   ]
-
-  }
+}

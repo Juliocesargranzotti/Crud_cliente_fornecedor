@@ -3,5 +3,5 @@ export interface Fornecedor{
   id : number;
   name : string;
   email : string;
-  categoria : string;
+  categoria: string[];
 }
