@@ -32,7 +32,8 @@
       "email": "Nicolas@gmail",
       "categoria": [
         "Alimentos"
-      ]
+      ],
+      "importar": "US"
     },
     {
       "id": 2,
@@ -41,7 +42,17 @@
       "categoria": [
         "Roupas",
         "Alimentos"
-      ]
+      ],
+      "importar": "BR"
+    },
+    {
+      "id": 3,
+      "name": "Julio",
+      "email": "jcgranzotti@gmail.com",
+      "categoria": [
+        "Sportivos"
+      ],
+      "importar": "FR"
     }
   ]
 }

@@ -2,6 +2,7 @@ import { FormBuilder, FormGroup, FormArray, FormControl, AbstractControl, Valida
 import { Fornecedor } from './../fornecedor';
 import { Component } from '@angular/core';
 import { FornecedorService } from '../fornecedor.service';
+import { importar } from '../importar';
 
 @Component({
   selector: 'app-fornecedor',
@@ -10,6 +11,7 @@ import { FornecedorService } from '../fornecedor.service';
 })
 export class FornecedorComponent {
 
+  importar = importar;
   fornecedor: Fornecedor[] = [];
   isEditing: boolean = false;
   formGroupClient: FormGroup;
@@ -21,7 +23,8 @@ export class FornecedorComponent {
       id: [''],
       name: ['',[Validators.required]],
       email: ['',[Validators.required,Validators.email]],
-      categoria: this.formBuilder.array([])
+      categoria: this.formBuilder.array([]),
+      importar: ['']
 
     });
   }

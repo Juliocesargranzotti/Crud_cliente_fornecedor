@@ -51,13 +51,22 @@
 </div>
   </div>
 
+  <div class="mb-3">
+    <label for="importar" class="form-label">Importar :</label>
+    <select formControlName="importar" class="form-select" id="importar">
+      <option value="">Selecione um Pais </option>
+      <option *ngFor="let importar of importar" [value]="importar.sigla">
+        {{ importar.nome }}
+      </option>
+    </select>
+  </div>
+
     <div class="mb-2 d-flex justify-content-end">
       <button type="button" class="btn btn-dark me-1" (click)="save()">Salvar</button>
       <button type="button" class="btn btn-dark" (click)="clean()">Limpar</button>
     </div>
 
 </form>
-
 
 
 
@@ -68,6 +77,7 @@
       <th scope="col">Nome</th>
       <th scope="col">Email</th>
       <th scope="col">Categoria</th>
+      <th scope="col">Importar</th>
 
     </tr>
   </thead>
@@ -76,6 +86,7 @@
       <th scope="row">{{fornecedor.id}}</th>
       <td>{{fornecedor.name}}</td>
       <td>{{fornecedor.email}}</td>
+      <td>{{fornecedor.importar}}</td>
       <td>
         <span *ngFor="let cat of fornecedor.categoria" class="mr-1">{{ cat }}</span>
       </td>

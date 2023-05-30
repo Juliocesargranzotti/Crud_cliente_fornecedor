@@ -4,4 +4,5 @@ export interface Fornecedor{
   name : string;
   email : string;
   categoria: string[];
+  importar: string;
 }
